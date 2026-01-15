@@ -1,0 +1,26 @@
+import './globals.css'
+import Navbar from '@/components/Navbar'
+import Contact from '@/components/Contact'
+import { AppProvider } from '@/context/AppContext'
+
+export const metadata = {
+  title: 'Harouna Coulibaly | Cybersecurity Student',
+  description: 'Portfolio of Harouna Coulibaly, Cybersecurity Student & Aspiring Pentester.',
+  icons: {
+    icon: '/assets/HC_logo.svg',
+  },
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="fr">
+      <body>
+        <AppProvider>
+          <Navbar />
+          {children}
+          <Contact />
+        </AppProvider>
+      </body>
+    </html>
+  )
+}

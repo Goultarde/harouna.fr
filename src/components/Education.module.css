@@ -1,0 +1,94 @@
+.educationSection {
+    padding: 4rem 2rem;
+    background-color: var(--background);
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--border);
+}
+
+.item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    left: -2.6rem;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--background);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover::before {
+    background-color: var(--primary);
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.school {
+    font-size: 1.5rem;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.degree {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.year {
+    color: #888;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.item:nth-child(4) {
+    animation-delay: 0.4s;
+}
