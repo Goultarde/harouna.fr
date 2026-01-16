@@ -12,8 +12,8 @@ export default function PortfolioPage() {
         <main>
             <div style={{ paddingTop: '5rem' }}>
                 <Projects />
-                <Skills />
                 <Certifications />
+                <Skills />
             </div>
         </main>
     );

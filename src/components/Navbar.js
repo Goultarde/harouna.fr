@@ -15,16 +15,19 @@ const Navbar = () => {
 
     return (
         <nav className={`${styles.navbar} ${isPinned ? styles.pinned : styles.unpinned}`}>
-            <div className={styles.logo}>
-                <Link href="/">
-                    <img src="/assets/HC_logo.svg" alt="Logo" style={{ height: '50px', width: 'auto' }} />
-                </Link>
+            <div className={styles.leftSection}>
+                <div className={styles.logo}>
+                    <Link href="/">
+                        <img src="/assets/HC_logo.png" alt="Logo" style={{ height: '50px', width: 'auto' }} />
+                    </Link>
+                </div>
+
             </div>
             <div className={styles.links}>
                 <Link href="/" className={styles.link}>{t.navbar.home}</Link>
                 <Link href="/portfolio" className={styles.link}>{t.navbar.portfolio}</Link>
                 <Link href="/blog" className={styles.link}>{t.navbar.blog}</Link>
-                <Link href="/#contact" className={styles.link}>{t.navbar.contact}</Link>
+
             </div>
             <div className={styles.controls}>
                 <button onClick={toggleLanguage} className={styles.controlBtn}>

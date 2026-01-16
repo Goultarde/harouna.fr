@@ -19,14 +19,14 @@ const Certifications = () => {
             issuer: "OffSec",
             date: "2026",
             image: "/assets/certifications/OSCP.svg",
-            color: "#c92424"
+            color: "#cc5717"
         },
         {
-            name: "eJPT",
+            name: "eJPTv2",
             issuer: "eLearnSecurity",
             date: "2023",
             image: "/assets/certifications/eJPT.svg",
-            color: "#1c61db"
+            color: "#ec3071"
         },
         {
             name: "Dante Pro Lab",

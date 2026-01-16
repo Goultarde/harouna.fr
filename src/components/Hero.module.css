@@ -99,7 +99,40 @@
         font-size: 2.5rem;
     }
 
+
     .subtitle {
         font-size: 1.2rem;
     }
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialIcon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    opacity: 0.9;
+    /* Neon Turquoise with Logo Extraction */
+    filter: grayscale(100%) sepia(100%) hue-rotate(125deg) saturate(500%) brightness(1.5) contrast(1.2);
+    mix-blend-mode: screen;
+    opacity: 1;
+}
+
+:global([data-theme='light']) .socialIcon {
+    /* Dark Teal for Light Mode */
+    filter: grayscale(100%) sepia(100%) hue-rotate(125deg) saturate(500%) brightness(0.6);
+    mix-blend-mode: multiply;
+}
+
+.socialIcon:hover {
+    transform: scale(1.1);
+    filter: none;
+    mix-blend-mode: normal;
+    opacity: 1;
 }
