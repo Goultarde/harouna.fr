@@ -68,6 +68,8 @@
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
+    padding: 0.5rem;
+    display: inline-block;
 }
 
 .link::after {
@@ -100,6 +102,11 @@
     cursor: pointer;
     font-family: var(--font-mono);
     transition: all 0.2s ease;
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .controlBtn:hover {

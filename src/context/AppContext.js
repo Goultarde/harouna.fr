@@ -44,7 +44,7 @@ export function AppProvider({ children }) {
             toggleLanguage,
             t: translations[language]
         }}>
-            {mounted ? children : <div style={{ visibility: 'hidden' }}>{children}</div>}
+            {children}
         </AppContext.Provider>
     );
 }

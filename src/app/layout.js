@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Harouna Coulibaly | Cybersecurity Student',
   description: 'Portfolio of Harouna Coulibaly, Cybersecurity Student & Aspiring Pentester.',
   icons: {
-    icon: '/assets/HC_logo.svg',
+    icon: '/assets/HC_logo_icon.png',
   },
 }
 

@@ -51,7 +51,7 @@ const Certifications = () => {
                 {certs.map((cert, index) => (
                     <div key={index} className={styles.card} style={{ borderColor: cert.color }}>
                         <div className={styles.imageContainer}>
-                            <img src={cert.image} alt={cert.name} className={styles.certImage} />
+                            <img src={cert.image} alt={cert.name} width="150" height="150" className={styles.certImage} />
                         </div>
                         <div className={styles.header}>
                             <h3 className={styles.certName}>{cert.name}</h3>

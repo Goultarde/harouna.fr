@@ -52,6 +52,12 @@
     background: rgba(0, 255, 148, 0.1);
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
+    font-weight: bold;
+}
+
+:global([data-theme='light']) .status {
+    background: rgba(0, 128, 74, 0.1);
+    color: var(--secondary);
 }
 
 .description {
@@ -72,4 +78,9 @@
     font-size: 0.8rem;
     color: var(--primary);
     opacity: 0.8;
+}
+
+:global([data-theme='light']) .techItem {
+    opacity: 1;
+    font-weight: 500;
 }

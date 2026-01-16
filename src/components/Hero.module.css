@@ -59,6 +59,10 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .primaryBtn:hover {
@@ -78,6 +82,10 @@
     transition: background-color 0.2s ease, color 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .secondaryBtn:hover {
@@ -86,11 +94,11 @@
 
 @keyframes glow {
     from {
-        filter: drop-shadow(0 0 2px rgba(0, 255, 148, 0.1));
+        text-shadow: 0 0 2px rgba(0, 255, 148, 0.1);
     }
 
     to {
-        filter: drop-shadow(0 0 10px rgba(0, 255, 148, 0.3));
+        text-shadow: 0 0 10px rgba(0, 255, 148, 0.3);
     }
 }
 
@@ -111,6 +119,20 @@
     margin-top: 2rem;
     justify-content: center;
     align-items: center;
+}
+
+.socialLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.socialLink:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .socialIcon {
