@@ -7,7 +7,7 @@ export const translations = {
             contact: "Réseaux"
         },
         hero: {
-            subtitle: "Étudiant en Cybersécurité & Pentester",
+            subtitle: "Étudiant en Cybersécurité & Aspirant Pentester",
             description: "Étudiant en 1ère année de Mastère à la recherche d’une alternance en Pentest (1 semaine en cours / 3 semaines en entreprise).",
             viewPortfolio: "Voir Portfolio",
             viewBlog: "Voir Blog",
@@ -45,6 +45,13 @@ export const translations = {
             title: "En Construction",
             subtitle: "Articles sur le Pentest et la Cybersécurité à venir.",
             wip: "🚧 Travaux en cours 🚧"
+        },
+        writeups: {
+            title: "Writeups",
+            hackthebox: {
+                title: "HackTheBox",
+                description: "Mes writeup de machines HackTheBox"
+            }
         },
         contact: {
             title: "Réseaux"
@@ -96,6 +103,13 @@ export const translations = {
             title: "Under Construction",
             subtitle: "Pentest and Cybersecurity articles coming soon.",
             wip: "🚧 Work in Progress 🚧"
+        },
+        writeups: {
+            title: "Writeups",
+            hackthebox: {
+                title: "HackTheBox",
+                description: "My HackTheBox machine writeups"
+            }
         },
         contact: {
             title: "Social Network"

@@ -26,6 +26,7 @@ const Navbar = () => {
             <div className={styles.links}>
                 <Link href="/" className={styles.link}>{t.navbar.home}</Link>
                 <Link href="/portfolio" className={styles.link}>{t.navbar.portfolio}</Link>
+                <Link href="/writeups" className={styles.link}>{t.writeups.title}</Link>
                 <Link href="/blog" className={styles.link}>{t.navbar.blog}</Link>
 
             </div>
