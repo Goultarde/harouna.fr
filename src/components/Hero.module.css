@@ -19,6 +19,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: glow 3s ease-in-out infinite alternate;
+    transition: text-shadow 0.3s ease;
+}
+
+.title:hover {
+    text-shadow: 0 0 20px var(--primary-glow);
 }
 
 .subtitle {

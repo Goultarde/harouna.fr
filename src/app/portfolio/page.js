@@ -1,6 +1,5 @@
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
-import Education from '@/components/Education';
 import Certifications from '@/components/Certifications';
 
 export const metadata = {
@@ -15,7 +14,6 @@ export default function PortfolioPage() {
                 <Projects />
                 <Skills />
                 <Certifications />
-                <Education />
             </div>
         </main>
     );

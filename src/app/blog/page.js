@@ -1,37 +1,28 @@
 'use client';
 
 import { useApp } from '@/context/AppContext';
+// import styles from './BlogPage.module.css';
 
 export default function BlogPage() {
     const { t } = useApp();
 
     return (
         <main style={{
-            height: '80vh',
             display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
             flexDirection: 'column',
-            textAlign: 'center'
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '80vh',
+            textAlign: 'center',
+            padding: '2rem'
         }}>
-            <h1 style={{
-                fontSize: '3rem',
-                color: 'var(--primary)',
-                marginBottom: '1rem',
-                textTransform: 'uppercase'
-            }}>
+            <h1 style={{ fontSize: '3rem', color: 'var(--primary)', marginBottom: '1rem' }}>
                 {t.blog.title}
             </h1>
-            <p style={{ color: 'var(--foreground)', fontSize: '1.2rem', opacity: 0.8 }}>
+            <p style={{ fontSize: '1.5rem', color: 'var(--foreground)', marginBottom: '2rem' }}>
                 {t.blog.subtitle}
             </p>
-            <div style={{
-                marginTop: '2rem',
-                padding: '1rem',
-                border: '1px dashed var(--secondary)',
-                borderRadius: '8px',
-                color: 'var(--foreground)'
-            }}>
+            <div style={{ fontSize: '2rem' }}>
                 {t.blog.wip}
             </div>
         </main>

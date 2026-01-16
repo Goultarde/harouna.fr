@@ -11,15 +11,15 @@ const Skills = () => {
     const skillsData = [
         {
             category: t.skills.categories.web,
-            items: ["SQLI", "XSS", "CSRF", "LFI/RFI", "XXE", "SSRF", "Burp Suite", "SQLMap"]
+            items: ["SQLI", "XSS", "CSRF", "LFI/RFI", "XXE", "SSRF", "Burp Suite"]
         },
         {
             category: t.skills.categories.ad,
-            items: ["Enumération", "Mouvement Latéral", "Pivotant", "Persistance", "Tunneling", "Kerbrute", "BloodHound"]
+            items: ["Enumération", "Mouvement Latéral", "Pivotant", "Persistance", "Tunneling"]
         },
         {
             category: t.skills.categories.network,
-            items: ["Samba AD", "Windows Server", "PFSense", "Cisco", "Wireshark", "Nmap", "Netcat"]
+            items: ["Samba AD", "Windows Server", "PFSense", "Cisco"]
         },
         {
             category: t.skills.categories.languages,

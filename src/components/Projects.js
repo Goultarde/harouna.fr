@@ -11,8 +11,8 @@ const Projects = () => {
             {
                 title: "Générateur de Malware",
                 status: "En cours",
-                description: "Création d’une PKI via HashiCorp Vault avec serveurs DNS bind9 chroot et clé tsig, serveur web nginx et apache2.",
-                tech: ["HashiCorp Vault", "DNS", "Nginx", "Apache"]
+                description: "Développement d’un générateur de malware en C pour comprendre les mécanismes d’obfuscation et d’évasion (à but éducatif uniquement).",
+                tech: ["C", "Malware Dev", "Obfuscation"]
             },
             {
                 title: "Lab de Pentest IaaC",
@@ -49,8 +49,8 @@ const Projects = () => {
             {
                 title: "Malware Generator",
                 status: "Ongoing",
-                description: "Creation of a PKI via HashiCorp Vault with bind9 chroot DNS servers and tsig key, nginx and apache2 web server.",
-                tech: ["HashiCorp Vault", "DNS", "Nginx", "Apache"]
+                description: "Development of a C malware generator to understand obfuscation and evasion mechanisms (educational purpose only).",
+                tech: ["C", "Malware Dev", "Obfuscation"]
             },
             {
                 title: "IaaC Pentest Lab",
