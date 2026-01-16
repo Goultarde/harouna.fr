@@ -19,14 +19,16 @@ const Certifications = () => {
             issuer: "OffSec",
             date: "2026",
             image: "/assets/certifications/OSCP.svg",
-            color: "#cc5717"
+            color: "#cc5717",
+            link: "https://credentials.offsec.com/f29c084b-e5c8-4fa1-893d-f4a243a7648f#acc.F1jkArlJ"
         },
         {
             name: "eJPTv2",
             issuer: "eLearnSecurity",
             date: "2023",
             image: "/assets/certifications/eJPT.svg",
-            color: "#ec3071"
+            color: "#ec3071",
+            link: "https://certs.ine.com/da66f12e-a0ec-484f-9209-744f6c67c112#acc.kKe1UCEH"
         },
         {
             name: "Dante Pro Lab",
@@ -48,17 +50,36 @@ const Certifications = () => {
         <section className={styles.certSection}>
             <h2 className={styles.title}>Certifications</h2>
             <div className={styles.grid}>
-                {certs.map((cert, index) => (
-                    <div key={index} className={styles.card} style={{ borderColor: cert.color }}>
-                        <div className={styles.imageContainer}>
-                            <img src={cert.image} alt={cert.name} width="150" height="150" className={styles.certImage} />
+                {certs.map((cert, index) => {
+                    const CardContent = () => (
+                        <>
+                            <div className={styles.imageContainer}>
+                                <img src={cert.image} alt={cert.name} width="150" height="150" className={styles.certImage} />
+                            </div>
+                            <div className={styles.header}>
+                                <h3 className={styles.certName}>{cert.name}</h3>
+                                <span className={styles.issuer}>{cert.issuer}</span>
+                            </div>
+                        </>
+                    );
+
+                    return cert.link ? (
+                        <a
+                            key={index}
+                            href={cert.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.card}
+                            style={{ borderColor: cert.color }}
+                        >
+                            <CardContent />
+                        </a>
+                    ) : (
+                        <div key={index} className={styles.card} style={{ borderColor: cert.color }}>
+                            <CardContent />
                         </div>
-                        <div className={styles.header}>
-                            <h3 className={styles.certName}>{cert.name}</h3>
-                            <span className={styles.issuer}>{cert.issuer}</span>
-                        </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </section>
     );

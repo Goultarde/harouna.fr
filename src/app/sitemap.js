@@ -20,5 +20,17 @@ export default function sitemap() {
             changeFrequency: 'weekly',
             priority: 0.5,
         },
+        {
+            url: 'https://harouna.fr/writeups',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.7,
+        },
+        {
+            url: 'https://harouna.fr/writeups/hackthebox',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.6,
+        },
     ]
 }
