@@ -42,9 +42,12 @@ export const translations = {
             current: "[Actuellement]"
         },
         blog: {
-            title: "En Construction",
-            subtitle: "Articles sur le Pentest et la Cybersécurité à venir.",
-            wip: "🚧 Travaux en cours 🚧"
+            title: "Blog",
+            subtitle: "Articles sur le Pentest et la Cybersécurité.",
+            forwardshell: {
+                title: "ForwardShell",
+                description: "Le shell oublié entre le Reverse, le Bind et le Webshell."
+            }
         },
         writeups: {
             title: "Writeups",
@@ -100,9 +103,12 @@ export const translations = {
             current: "[Currently]"
         },
         blog: {
-            title: "Under Construction",
-            subtitle: "Pentest and Cybersecurity articles coming soon.",
-            wip: "🚧 Work in Progress 🚧"
+            title: "Blog",
+            subtitle: "Pentest and Cybersecurity articles.",
+            forwardshell: {
+                title: "ForwardShell",
+                description: "The forgotten shell between Reverse, Bind and Webshell."
+            }
         },
         writeups: {
             title: "Writeups",

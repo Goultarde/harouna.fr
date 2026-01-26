@@ -84,3 +84,13 @@
     opacity: 1;
     font-weight: 500;
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.linkIcon {
+    font-size: 0.8em;
+    color: var(--secondary);
+    vertical-align: super;
+}

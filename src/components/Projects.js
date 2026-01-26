@@ -18,7 +18,8 @@ const Projects = () => {
                 title: "Lab de Pentest IaaC",
                 status: "Terminé",
                 description: "Création d’un lab de pentest Active Directory/Linux en Infrastructure as Code avec Vagrant et Ansible. Accessible sur GitHub.",
-                tech: ["Vagrant", "Ansible", "Active Directory", "Linux"]
+                tech: ["Vagrant", "Ansible", "Active Directory", "Linux"],
+                link: "https://0xbbuddha.github.io/pantheon-lab.github.io/"
             },
             {
                 title: "Infrastructure Active Directory",
@@ -56,7 +57,8 @@ const Projects = () => {
                 title: "IaaC Pentest Lab",
                 status: "Completed",
                 description: "Creation of an Active Directory/Linux pentest lab in Infrastructure as Code with Vagrant and Ansible. Accessible on GitHub.",
-                tech: ["Vagrant", "Ansible", "Active Directory", "Linux"]
+                tech: ["Vagrant", "Ansible", "Active Directory", "Linux"],
+                link: "https://0xbbuddha.github.io/pantheon-lab.github.io/"
             },
             {
                 title: "Active Directory Infrastructure",
@@ -91,18 +93,37 @@ const Projects = () => {
         <section className={styles.projectsSection}>
             <h2 className={styles.title}>{t.projects.title}</h2>
             <div className={styles.grid}>
-                {projects.map((project, index) => (
-                    <div key={index} className={styles.card}>
-                        <span className={styles.status}>{project.status}</span>
-                        <h3 className={styles.cardTitle}>{project.title}</h3>
-                        <p className={styles.description}>{project.description}</p>
-                        <div className={styles.techStack}>
-                            {project.tech.map((t, i) => (
-                                <span key={i} className={styles.techItem}>#{t}</span>
-                            ))}
+                {projects.map((project, index) => {
+                    const CardContent = () => (
+                        <div className={`${styles.card} ${project.link ? styles.clickable : ''}`}>
+                            <span className={styles.status}>{project.status}</span>
+                            <h3 className={styles.cardTitle}>
+                                {project.title}
+                                {project.link && <span className={styles.linkIcon}> ↗</span>}
+                            </h3>
+                            <p className={styles.description}>{project.description}</p>
+                            <div className={styles.techStack}>
+                                {project.tech.map((t, i) => (
+                                    <span key={i} className={styles.techItem}>#{t}</span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    );
+
+                    return project.link ? (
+                        <a
+                            key={index}
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none', color: 'inherit' }}
+                        >
+                            <CardContent />
+                        </a>
+                    ) : (
+                        <div key={index}><CardContent /></div>
+                    );
+                })}
             </div>
         </section>
     );

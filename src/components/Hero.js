@@ -29,7 +29,7 @@ const Hero = () => {
                 <a href="https://github.com/Goultarde" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub">
                     <img src="/assets/Github.svg" alt="GitHub" width="32" height="32" className={styles.socialIcon} />
                 </a>
-                <a href="https://app.hackthebox.com/users/1505253" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="HackTheBox">
+                <a href="https://app.hackthebox.com/public/users/1505253" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="HackTheBox">
                     <img src="/assets/hackthebox.svg" alt="HackTheBox" width="32" height="32" className={styles.socialIcon} />
                 </a>
                 <a href="https://portal.offsec.com/public-profile/1b006de3-2f37-11f0-9794-0ad45fbd5c7b" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="OffSec">
