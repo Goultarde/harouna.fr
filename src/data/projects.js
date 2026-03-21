@@ -4,13 +4,13 @@ export const projectsData = {
             title: "Seemslegit - Générateur de Malware",
             status: "En cours",
             description: "Développement d'un générateur de malware pour comprendre les mécanismes d'obfuscation et d'évasion (à but éducatif uniquement).",
-            tech: ["Malware Dev", "Obfuscation", "Evasion"]
+            tech: ["maldev", "Obfuscation", "Evasion"]
         },
         {
             title: "Kratos - Agent Mythic C2",
             status: "En cours",
             description: "Développement d'un agent C2 compatible avec le framework Mythic.",
-            tech: ["C2", "Malware Dev", "Mythic"],
+            tech: ["C2", "maldev", "Mythic"],
             link: "https://github.com/Goultarde/kratos"
         },
         {
@@ -28,9 +28,9 @@ export const projectsData = {
             link: "https://0xbbuddha.github.io/pantheon-lab.github.io/"
         },
         {
-            title: "Infrastructure Active Directory",
+            title: "Infrastructures Active Directory",
             status: "Terminé",
-            description: "Installation d'une infrastructure complète avec machines clientes, serveurs DNS, DHCP, IIS, GPO, et OU.",
+            description: "Installation d'infrastructures complètes avec machines clientes, serveurs DNS, DHCP, IIS, GPO, OU et relations de confiance inter-domaines.",
             tech: ["Windows Server", "AD DS", "DNS", "DHCP"]
         },
         {
@@ -57,13 +57,13 @@ export const projectsData = {
             title: "Seemslegit - Malware Generator",
             status: "Ongoing",
             description: "Development of a malware generator to understand obfuscation and evasion mechanisms (educational purpose only).",
-            tech: ["Malware Dev", "Obfuscation", "Evasion"]
+            tech: ["maldev", "Obfuscation", "Evasion"]
         },
         {
             title: "Kratos - Mythic C2 Agent",
             status: "Ongoing",
             description: "Development of a C2 agent compatible with the Mythic framework.",
-            tech: ["C2", "Malware Dev", "Mythic"],
+            tech: ["C2", "maldev", "Mythic"],
             link: "https://github.com/Goultarde/kratos"
         },
         {
@@ -81,9 +81,9 @@ export const projectsData = {
             link: "https://0xbbuddha.github.io/pantheon-lab.github.io/"
         },
         {
-            title: "Active Directory Infrastructure",
+            title: "Active Directory Infrastructures",
             status: "Completed",
-            description: "Installation of a complete infrastructure with client machines, DNS, DHCP, IIS, GPO, and OU servers.",
+            description: "Installation of complete infrastructures with client machines, DNS, DHCP, IIS, GPO, OU servers, and cross-domain trust relationships.",
             tech: ["Windows Server", "AD DS", "DNS", "DHCP"]
         },
         {
