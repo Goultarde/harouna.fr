@@ -23,6 +23,14 @@ const Certifications = () => {
             link: "https://credentials.offsec.com/f29c084b-e5c8-4fa1-893d-f4a243a7648f#acc.F1jkArlJ"
         },
         {
+            name: "CRTO",
+            issuer: "Zero-Point Security",
+            date: "2026",
+            image: "/assets/certifications/CRTO_LOGO.png",
+            color: "#d20c0cff",
+            link: "https://certs.zeropointsecurity.co.uk/de7b9537-420b-463f-b31c-5c27f47fc776"
+        },
+        {
             name: "eJPTv2",
             issuer: "eLearnSecurity",
             date: "2023",
