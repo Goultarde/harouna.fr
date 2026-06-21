@@ -8,7 +8,7 @@ const writings = {
       date:  '2026',
       title: 'Relations de Trust AD',
       tag:   'Blog',
-      desc:  'Comment les domaines AD se font confiance, et pourquoi c\'est souvent une mauvaise idee.',
+      desc:  'Comment les domaines AD se font confiance, et pourquoi c\'est souvent une mauvaise idée.',
       href:  '/blog/articles/active-directory/ad-trusts',
     },
     {
@@ -22,7 +22,7 @@ const writings = {
       date:  '2024',
       title: 'HackTheBox',
       tag:   'Writeups',
-      desc:  'Writeups de machines HackTheBox resolues.',
+      desc:  'Writeups de machines HackTheBox résolues.',
       href:  '/blog/writeups',
     },
   ],
@@ -54,7 +54,7 @@ const writings = {
 const Journal = () => {
   const { language } = useApp();
   const items = writings[language];
-  const title = language === 'fr' ? 'Ecrits' : 'Writings';
+  const title = language === 'fr' ? 'Écrits' : 'Writings';
 
   return (
     <section className="section paper" id="ecrits">
@@ -66,7 +66,7 @@ const Journal = () => {
           </div>
           <p className="desc">
             {language === 'fr'
-              ? 'Articles de blog et writeups sur le pentest et la cybersecurite.'
+              ? 'Articles de blog et writeups sur le pentest et la cybersécurité.'
               : 'Blog posts and write-ups on pentesting and cybersecurity.'}
           </p>
         </div>

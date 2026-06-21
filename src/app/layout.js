@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar'
 
 export const metadata = {
   title: 'Harouna Coulibaly | Cybersecurity Portfolio',
-  description: 'Portfolio de Harouna Coulibaly, Mastere Cybersecurite, Red Team & Offensive Security.',
+  description: 'Portfolio de Harouna Coulibaly, Mastère Cybersécurité, Red Team & Offensive Security.',
   icons: {
     icon: '/assets/favicon-96x96.png',
   },

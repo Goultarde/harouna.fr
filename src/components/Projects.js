@@ -6,20 +6,20 @@ const projectsData = {
   fr: [
     {
       title: 'Nihil',
-      subtitle: 'Environnement Pentest Dockerise',
+      subtitle: 'Environnement Pentest Dockerisé',
       status: 'active',
       statusLabel: 'En cours',
-      desc: 'Environnement de pentest complet et portable, entierement dockerise pour un deploiement rapide.',
+      desc: 'Environnement de pentest complet et portable, entièrement dockerisé pour un déploiement rapide.',
       tech: ['Docker', 'Pentest', 'DevOps'],
       link: 'https://github.com/TheNullPigeons',
       span: 'span-2',
     },
     {
       title: 'Seemslegit',
-      subtitle: 'Generateur de Malware',
+      subtitle: 'Générateur de Malware',
       status: 'active',
       statusLabel: 'En cours',
-      desc: "Developpement d'un generateur de malware pour comprendre les mecanismes d'obfuscation et d'evasion. Objectif educatif uniquement.",
+      desc: "Développement d'un générateur de malware pour comprendre les mécanismes d'obfuscation et d'évasion. Objectif éducatif uniquement.",
       tech: ['maldev', 'Obfuscation', 'Evasion'],
       span: 'span-3',
     },
@@ -28,7 +28,7 @@ const projectsData = {
       subtitle: 'Agent Mythic C2',
       status: 'active',
       statusLabel: 'En cours',
-      desc: "Developpement d'un agent C2 compatible avec le framework Mythic. Fonctionnalites offensives avancees.",
+      desc: "Développement d'un agent C2 compatible avec le framework Mythic. Fonctionnalités offensives avancées.",
       tech: ['C2', 'maldev', 'Mythic'],
       link: 'https://github.com/Goultarde/kratos',
       span: 'span-3',
@@ -37,8 +37,8 @@ const projectsData = {
       title: 'Lab Pentest IaaC',
       subtitle: 'Infrastructure as Code',
       status: 'done',
-      statusLabel: 'Termine',
-      desc: "Creation d'un lab de pentest Active Directory/Linux en Infrastructure as Code avec Vagrant et Ansible.",
+      statusLabel: 'Terminé',
+      desc: "Création d'un lab de pentest Active Directory/Linux en Infrastructure as Code avec Vagrant et Ansible.",
       tech: ['Vagrant', 'Ansible', 'Active Directory'],
       link: 'https://0xbbuddha.github.io/pantheon-lab.github.io/',
       span: 'span-4',
@@ -47,8 +47,8 @@ const projectsData = {
       title: 'Infrastructures AD',
       subtitle: 'Windows Server',
       status: 'done',
-      statusLabel: 'Termine',
-      desc: 'Installation d\'infrastructures completes avec DNS, DHCP, IIS, GPO et relations de confiance inter-domaines.',
+      statusLabel: 'Terminé',
+      desc: 'Installation d\'infrastructures complètes avec DNS, DHCP, IIS, GPO et relations de confiance inter-domaines.',
       tech: ['Windows Server', 'AD DS', 'DNS', 'DHCP'],
       span: 'span-2',
     },
@@ -56,8 +56,8 @@ const projectsData = {
       title: 'Architecture SCCM',
       subtitle: 'Gestion de Parc',
       status: 'done',
-      statusLabel: 'Termine',
-      desc: "Creation d'une architecture SCCM standalone pour la gestion de parc informatique.",
+      statusLabel: 'Terminé',
+      desc: "Création d'une architecture SCCM standalone pour la gestion de parc informatique.",
       tech: ['SCCM', 'Windows Server'],
       span: 'span-2',
     },
@@ -65,7 +65,7 @@ const projectsData = {
       title: 'Supervision ISR',
       subtitle: 'Monitoring GNU/Linux',
       status: 'done',
-      statusLabel: 'Termine',
+      statusLabel: 'Terminé',
       desc: "Supervision d'une infrastructure GNU/Linux avec Prometheus et Grafana.",
       tech: ['Prometheus', 'Grafana', 'Linux'],
       span: 'span-2',
@@ -74,8 +74,8 @@ const projectsData = {
       title: 'Outils Python',
       subtitle: 'Outils Offensifs',
       status: 'done',
-      statusLabel: 'Termine',
-      desc: 'Developpement d\'outils offensifs : ARP Spoofer, Port Scanner, Web Scraper, Keylogger.',
+      statusLabel: 'Terminé',
+      desc: 'Développement d\'outils offensifs : ARP Spoofer, Port Scanner, Web Scraper, Keylogger.',
       tech: ['Python', 'Scapy', 'Requests'],
       span: 'span-2',
     },
@@ -173,7 +173,7 @@ const Projects = () => {
           </div>
           <p className="desc">
             {language === 'fr'
-              ? 'Projets personnels en securite offensive, infrastructure et developpement d\'outils.'
+              ? 'Projets personnels en sécurité offensive, infrastructure et développement d\'outils.'
               : 'Personal projects in offensive security, infrastructure and tool development.'}
           </p>
         </div>

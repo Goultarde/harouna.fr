@@ -7,8 +7,8 @@ const content = {
   fr: {
     status:    'Disponible pour alternance',
     location:  'France',
-    role:      'Mastere Cybersecurite, Red Team & Securite Offensive',
-    lede:      "Etudiant passionne par la securite offensive. Je me forme aux techniques d'attaque, au Red Teaming et au developpement d'outils. A la recherche d'une alternance en Pentest.",
+    role:      'Mastère Cybersécurité, Red Team & Sécurité Offensive',
+    lede:      "Étudiant passionné par la sécurité offensive. Je me forme aux techniques d'attaque, au Red Teaming et au développement d'outils. À la recherche d'une alternance en Pentest.",
     cta1:      'Voir les projets',
     cta2:      'Me contacter',
   },

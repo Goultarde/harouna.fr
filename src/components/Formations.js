@@ -9,14 +9,14 @@ const formations = {
       title:   'Master en cybersécurité',
       current: true,
       place:   'Oteria',
-      desc:    'Formation en securite offensive, gouvernance et gestion de la securite des systemes d\'information.',
+      desc:    'Formation en sécurité offensive, gouvernance et gestion de la sécurité des systèmes d\'information.',
     },
     {
       years:   '2024 - 2025',
       title:   'Bachelor en cybersécurité',
       current: false,
       place:   'Oteria',
-      desc:    'Formation en cybersecurite : securite offensive, administration systeme et reseaux.',
+      desc:    'Formation en cybersécurité : sécurité offensive, administration système et réseaux.',
     },
   ],
   en: [
@@ -51,7 +51,7 @@ const Formations = () => {
           </div>
           <p className="desc">
             {language === 'fr'
-              ? 'Parcours academique en cybersecurite et systemes d\'information.'
+              ? 'Parcours académique en cybersécurité et systèmes d\'information.'
               : 'Academic background in cybersecurity and information systems.'}
           </p>
         </div>

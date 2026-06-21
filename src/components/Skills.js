@@ -6,14 +6,14 @@ const skillsData = {
   fr: [
     {
       title: 'Active Directory',
-      items: ['Enumeration', 'Mouvement Lateral', 'Pivoting', 'Persistance', 'Tunneling'],
+      items: ['Énumération', 'Mouvement Latéral', 'Pivoting', 'Persistance', 'Tunneling'],
     },
     {
       title: 'Pentest Web',
       items: ['SQLi', 'XSS', 'CSRF', 'LFI/RFI', 'XXE', 'SSRF', 'Burp Suite'],
     },
     {
-      title: 'Reseau & SysAdmin',
+      title: 'Réseau & SysAdmin',
       items: ['Samba AD', 'Windows Server', 'PFSense', 'Cisco', 'Prometheus', 'Grafana'],
     },
     {
@@ -58,12 +58,12 @@ const Skills = () => {
       <div className="shell">
         <div className="section-head">
           <div>
-            <div className="kicker"><span className="ix">02</span> {language === 'fr' ? 'Competences' : 'Skills'}</div>
-            <h2>{language === 'fr' ? 'Competences' : 'Skills'}</h2>
+            <div className="kicker"><span className="ix">02</span> {language === 'fr' ? 'Compétences' : 'Skills'}</div>
+            <h2>{language === 'fr' ? 'Compétences' : 'Skills'}</h2>
           </div>
           <p className="desc">
             {language === 'fr'
-              ? 'Techniques offensives, administration systeme et developpement d\'outils.'
+              ? 'Techniques offensives, administration système et développement d\'outils.'
               : 'Offensive techniques, system administration and tool development.'}
           </p>
         </div>
