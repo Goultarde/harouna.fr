@@ -22,6 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          submodules: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -50,11 +51,9 @@ jobs:
 
       - name: Install Quartz dependencies
         run: cd quartz && npm install --ignore-scripts
-        if: hashFiles('quartz/package.json') != ''
 
       - name: Build Quartz into out/blog
         run: cd quartz && node ./quartz/bootstrap-cli.mjs build --output ../out/blog
-        if: hashFiles('quartz/package.json') != ''
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
