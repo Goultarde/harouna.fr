@@ -6,49 +6,32 @@ import { translations } from '@/data/translations';
 const AppContext = createContext();
 
 export function AppProvider({ children }) {
-    const [theme, setTheme] = useState('dark');
-    const [language, setLanguage] = useState('fr');
-    const [mounted, setMounted] = useState(false);
+  const [language, setLanguageState] = useState('fr');
 
-    useEffect(() => {
-        // Theme initialization
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        setTheme(savedTheme);
-        document.documentElement.setAttribute('data-theme', savedTheme);
+  useEffect(() => {
+    const saved = localStorage.getItem('language') || 'fr';
+    setLanguageState(saved);
+  }, []);
 
-        // Language initialization
-        const savedLang = localStorage.getItem('language') || 'fr';
-        setLanguage(savedLang);
+  const setLanguage = (lang) => {
+    setLanguageState(lang);
+    try { localStorage.setItem('language', lang); } catch {}
+  };
 
-        setMounted(true);
-    }, []);
+  const toggleLanguage = () => setLanguage(language === 'fr' ? 'en' : 'fr');
 
-    const toggleTheme = () => {
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
-        document.documentElement.setAttribute('data-theme', newTheme);
-    };
-
-    const toggleLanguage = () => {
-        const newLang = language === 'fr' ? 'en' : 'fr';
-        setLanguage(newLang);
-        localStorage.setItem('language', newLang);
-    };
-
-    return (
-        <AppContext.Provider value={{
-            theme,
-            toggleTheme,
-            language,
-            toggleLanguage,
-            t: translations[language]
-        }}>
-            {children}
-        </AppContext.Provider>
-    );
+  return (
+    <AppContext.Provider value={{
+      language,
+      setLanguage,
+      toggleLanguage,
+      t: translations[language],
+    }}>
+      {children}
+    </AppContext.Provider>
+  );
 }
 
 export function useApp() {
-    return useContext(AppContext);
+  return useContext(AppContext);
 }

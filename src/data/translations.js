@@ -27,7 +27,8 @@ export const translations = {
                 web: "Pentest Web",
                 ad: "Active Directory",
                 network: "Réseau & SysAdmin",
-                languages: "Langages"
+                languages: "Langages",
+                redteam: "Red Teaming"
             }
         },
         projects: {
@@ -88,7 +89,8 @@ export const translations = {
                 web: "Web Pentest",
                 ad: "Active Directory",
                 network: "Network & SysAdmin",
-                languages: "Languages"
+                languages: "Languages",
+                redteam: "Red Teaming"
             }
         },
         projects: {

@@ -1,6 +1,13 @@
 export const projectsData = {
     fr: [
         {
+            title: "Nihil - Environnement de Pentest Dockerisé",
+            status: "En cours",
+            description: "Environnement de pentest complet et portable, entièrement dockerisé.",
+            tech: ["Docker", "Pentest", "DevOps"],
+            link: "https://github.com/TheNullPigeons"
+        },
+        {
             title: "Seemslegit - Générateur de Malware",
             status: "En cours",
             description: "Développement d'un générateur de malware pour comprendre les mécanismes d'obfuscation et d'évasion (à but éducatif uniquement).",
@@ -12,13 +19,6 @@ export const projectsData = {
             description: "Développement d'un agent C2 compatible avec le framework Mythic.",
             tech: ["C2", "maldev", "Mythic"],
             link: "https://github.com/Goultarde/kratos"
-        },
-        {
-            title: "Nihil - Environnement de Pentest Dockerisé",
-            status: "En cours",
-            description: "Environnement de pentest complet et portable, entièrement dockerisé.",
-            tech: ["Docker", "Pentest", "DevOps"],
-            link: "https://github.com/TheNullPigeons"
         },
         {
             title: "Lab de Pentest IaaC",
@@ -54,6 +54,13 @@ export const projectsData = {
     ],
     en: [
         {
+            title: "Nihil - Dockerized Pentest Environment",
+            status: "Ongoing",
+            description: "A complete and portable pentest environment, fully dockerized.",
+            tech: ["Docker", "Pentest", "DevOps"],
+            link: "https://github.com/TheNullPigeons"
+        },
+        {
             title: "Seemslegit - Malware Generator",
             status: "Ongoing",
             description: "Development of a malware generator to understand obfuscation and evasion mechanisms (educational purpose only).",
@@ -65,13 +72,6 @@ export const projectsData = {
             description: "Development of a C2 agent compatible with the Mythic framework.",
             tech: ["C2", "maldev", "Mythic"],
             link: "https://github.com/Goultarde/kratos"
-        },
-        {
-            title: "Nihil - Dockerized Pentest Environment",
-            status: "Ongoing",
-            description: "A complete and portable pentest environment, fully dockerized.",
-            tech: ["Docker", "Pentest", "DevOps"],
-            link: "https://github.com/TheNullPigeons"
         },
         {
             title: "IaaC Pentest Lab",

@@ -55,7 +55,7 @@
     font-weight: bold;
 }
 
-:global([data-theme='light']) .status {
+:global([data-theme='paper']) .status {
     background: rgba(0, 128, 74, 0.1);
     color: var(--secondary);
 }
@@ -80,7 +80,7 @@
     opacity: 0.8;
 }
 
-:global([data-theme='light']) .techItem {
+:global([data-theme='paper']) .techItem {
     opacity: 1;
     font-weight: 500;
 }

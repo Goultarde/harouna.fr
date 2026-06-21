@@ -1,49 +1,91 @@
 'use client';
 
 import { useApp } from '@/context/AppContext';
-import styles from './Skills.module.css';
+
+const skillsData = {
+  fr: [
+    {
+      title: 'Active Directory',
+      items: ['Enumeration', 'Mouvement Lateral', 'Pivoting', 'Persistance', 'Tunneling'],
+    },
+    {
+      title: 'Pentest Web',
+      items: ['SQLi', 'XSS', 'CSRF', 'LFI/RFI', 'XXE', 'SSRF', 'Burp Suite'],
+    },
+    {
+      title: 'Reseau & SysAdmin',
+      items: ['Samba AD', 'Windows Server', 'PFSense', 'Cisco', 'Prometheus', 'Grafana'],
+    },
+    {
+      title: 'Red Teaming',
+      items: ['Cobalt Strike', 'Mythic C2', 'Artifact Kit', 'maldev', 'OPSEC'],
+    },
+    {
+      title: 'Langages',
+      items: ['Python', 'HTML/CSS/JS', 'PHP', 'Bash/Shell', 'C'],
+    },
+  ],
+  en: [
+    {
+      title: 'Active Directory',
+      items: ['Enumeration', 'Lateral Movement', 'Pivoting', 'Persistence', 'Tunneling'],
+    },
+    {
+      title: 'Web Pentest',
+      items: ['SQLi', 'XSS', 'CSRF', 'LFI/RFI', 'XXE', 'SSRF', 'Burp Suite'],
+    },
+    {
+      title: 'Network & SysAdmin',
+      items: ['Samba AD', 'Windows Server', 'PFSense', 'Cisco', 'Prometheus', 'Grafana'],
+    },
+    {
+      title: 'Red Teaming',
+      items: ['Cobalt Strike', 'Mythic C2', 'Artifact Kit', 'maldev', 'OPSEC'],
+    },
+    {
+      title: 'Languages',
+      items: ['Python', 'HTML/CSS/JS', 'PHP', 'Bash/Shell', 'C'],
+    },
+  ],
+};
 
 const Skills = () => {
-    const { t, language } = useApp();
+  const { language } = useApp();
+  const cats = skillsData[language];
 
-    // Data defined inside component to react to language changes if we were to translate items, 
-    // but here mainly categories need translation. Items stay mostly same but could be translated if needed.
-    const skillsData = [
-        {
-            category: t.skills.categories.web,
-            items: ["SQLI", "XSS", "CSRF", "LFI/RFI", "XXE", "SSRF", "Burp Suite"]
-        },
-        {
-            category: t.skills.categories.ad,
-            items: ["Enumération", "Mouvement Latéral", "Pivotant", "Persistance", "Tunneling"]
-        },
-        {
-            category: t.skills.categories.network,
-            items: ["Samba AD", "Windows Server", "PFSense", "Cisco"]
-        },
-        {
-            category: t.skills.categories.languages,
-            items: ["Python", "HTML/CSS/JS", "PHP", "Bash/Shell"]
-        }
-    ];
+  return (
+    <section className="section paper" id="competences">
+      <div className="shell">
+        <div className="section-head">
+          <div>
+            <div className="kicker"><span className="ix">02</span> {language === 'fr' ? 'Competences' : 'Skills'}</div>
+            <h2>{language === 'fr' ? 'Competences' : 'Skills'}</h2>
+          </div>
+          <p className="desc">
+            {language === 'fr'
+              ? 'Techniques offensives, administration systeme et developpement d\'outils.'
+              : 'Offensive techniques, system administration and tool development.'}
+          </p>
+        </div>
 
-    return (
-        <section className={styles.skillsSection}>
-            <h2 className={styles.title}>{t.skills.title}</h2>
-            <div className={styles.categories}>
-                {skillsData.map((cat, index) => (
-                    <div key={index} className={styles.category}>
-                        <h3 className={styles.categoryTitle}>{cat.category}</h3>
-                        <div className={styles.skillList}>
-                            {cat.items.map((skill, i) => (
-                                <span key={i} className={styles.skillTag}>{skill}</span>
-                            ))}
-                        </div>
-                    </div>
+        <div className="skills">
+          {cats.map((cat, i) => (
+            <div key={i} className="skill-cat">
+              <header>
+                <h3>{cat.title}</h3>
+                <span className="n">{String(cat.items.length).padStart(2, '0')}</span>
+              </header>
+              <div className="skill-tags">
+                {cat.items.map((item, j) => (
+                  <span key={j} className="skill-tag">{item}</span>
                 ))}
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Skills;

@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build && cd quartz && node ./quartz/bootstrap-cli.mjs build --output ../out/blog",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "blog:dev": "cd quartz && node ./quartz/bootstrap-cli.mjs build --serve",
+    "blog:preview": "cd quartz && node ./quartz/bootstrap-cli.mjs build --output ../out/blog && cd .. && npx --yes serve out/blog -l 8080",
+    "dev:all": "next dev --webpack & (cd quartz && node ./quartz/bootstrap-cli.mjs build --serve)"
   },
   "dependencies": {
     "next": "16.1.2",

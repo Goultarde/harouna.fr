@@ -1,53 +1,218 @@
 'use client';
 
 import { useApp } from '@/context/AppContext';
-import { projectsData } from '@/data/projects';
-import styles from './Projects.module.css';
+
+const projectsData = {
+  fr: [
+    {
+      title: 'Nihil',
+      subtitle: 'Environnement Pentest Dockerise',
+      status: 'active',
+      statusLabel: 'En cours',
+      desc: 'Environnement de pentest complet et portable, entierement dockerise pour un deploiement rapide.',
+      tech: ['Docker', 'Pentest', 'DevOps'],
+      link: 'https://github.com/TheNullPigeons',
+      span: 'span-2',
+    },
+    {
+      title: 'Seemslegit',
+      subtitle: 'Generateur de Malware',
+      status: 'active',
+      statusLabel: 'En cours',
+      desc: "Developpement d'un generateur de malware pour comprendre les mecanismes d'obfuscation et d'evasion. Objectif educatif uniquement.",
+      tech: ['maldev', 'Obfuscation', 'Evasion'],
+      span: 'span-3',
+    },
+    {
+      title: 'Kratos',
+      subtitle: 'Agent Mythic C2',
+      status: 'active',
+      statusLabel: 'En cours',
+      desc: "Developpement d'un agent C2 compatible avec le framework Mythic. Fonctionnalites offensives avancees.",
+      tech: ['C2', 'maldev', 'Mythic'],
+      link: 'https://github.com/Goultarde/kratos',
+      span: 'span-3',
+    },
+    {
+      title: 'Lab Pentest IaaC',
+      subtitle: 'Infrastructure as Code',
+      status: 'done',
+      statusLabel: 'Termine',
+      desc: "Creation d'un lab de pentest Active Directory/Linux en Infrastructure as Code avec Vagrant et Ansible.",
+      tech: ['Vagrant', 'Ansible', 'Active Directory'],
+      link: 'https://0xbbuddha.github.io/pantheon-lab.github.io/',
+      span: 'span-4',
+    },
+    {
+      title: 'Infrastructures AD',
+      subtitle: 'Windows Server',
+      status: 'done',
+      statusLabel: 'Termine',
+      desc: 'Installation d\'infrastructures completes avec DNS, DHCP, IIS, GPO et relations de confiance inter-domaines.',
+      tech: ['Windows Server', 'AD DS', 'DNS', 'DHCP'],
+      span: 'span-2',
+    },
+    {
+      title: 'Architecture SCCM',
+      subtitle: 'Gestion de Parc',
+      status: 'done',
+      statusLabel: 'Termine',
+      desc: "Creation d'une architecture SCCM standalone pour la gestion de parc informatique.",
+      tech: ['SCCM', 'Windows Server'],
+      span: 'span-2',
+    },
+    {
+      title: 'Supervision ISR',
+      subtitle: 'Monitoring GNU/Linux',
+      status: 'done',
+      statusLabel: 'Termine',
+      desc: "Supervision d'une infrastructure GNU/Linux avec Prometheus et Grafana.",
+      tech: ['Prometheus', 'Grafana', 'Linux'],
+      span: 'span-2',
+    },
+    {
+      title: 'Outils Python',
+      subtitle: 'Outils Offensifs',
+      status: 'done',
+      statusLabel: 'Termine',
+      desc: 'Developpement d\'outils offensifs : ARP Spoofer, Port Scanner, Web Scraper, Keylogger.',
+      tech: ['Python', 'Scapy', 'Requests'],
+      span: 'span-2',
+    },
+  ],
+  en: [
+    {
+      title: 'Nihil',
+      subtitle: 'Dockerized Pentest Env',
+      status: 'active',
+      statusLabel: 'In progress',
+      desc: 'Complete and portable pentest environment, fully dockerized for rapid deployment.',
+      tech: ['Docker', 'Pentest', 'DevOps'],
+      link: 'https://github.com/TheNullPigeons',
+      span: 'span-2',
+    },
+    {
+      title: 'Seemslegit',
+      subtitle: 'Malware Generator',
+      status: 'active',
+      statusLabel: 'In progress',
+      desc: 'Development of a malware generator to understand obfuscation and evasion mechanisms. Educational purpose only.',
+      tech: ['maldev', 'Obfuscation', 'Evasion'],
+      span: 'span-3',
+    },
+    {
+      title: 'Kratos',
+      subtitle: 'Mythic C2 Agent',
+      status: 'active',
+      statusLabel: 'In progress',
+      desc: 'Development of a C2 agent compatible with the Mythic framework. Advanced offensive capabilities.',
+      tech: ['C2', 'maldev', 'Mythic'],
+      link: 'https://github.com/Goultarde/kratos',
+      span: 'span-3',
+    },
+    {
+      title: 'Pentest Lab IaaC',
+      subtitle: 'Infrastructure as Code',
+      status: 'done',
+      statusLabel: 'Done',
+      desc: 'Active Directory/Linux pentest lab built as Infrastructure as Code with Vagrant and Ansible.',
+      tech: ['Vagrant', 'Ansible', 'Active Directory'],
+      link: 'https://0xbbuddha.github.io/pantheon-lab.github.io/',
+      span: 'span-4',
+    },
+    {
+      title: 'AD Infrastructures',
+      subtitle: 'Windows Server',
+      status: 'done',
+      statusLabel: 'Done',
+      desc: 'Full AD infrastructure with DNS, DHCP, IIS, GPOs, OUs and cross-domain trust relationships.',
+      tech: ['Windows Server', 'AD DS', 'DNS', 'DHCP'],
+      span: 'span-2',
+    },
+    {
+      title: 'SCCM Architecture',
+      subtitle: 'Endpoint Management',
+      status: 'done',
+      statusLabel: 'Done',
+      desc: 'Standalone SCCM architecture for fleet management.',
+      tech: ['SCCM', 'Windows Server'],
+      span: 'span-2',
+    },
+    {
+      title: 'ISR Monitoring',
+      subtitle: 'GNU/Linux Supervision',
+      status: 'done',
+      statusLabel: 'Done',
+      desc: 'GNU/Linux infrastructure monitoring with Prometheus and Grafana.',
+      tech: ['Prometheus', 'Grafana', 'Linux'],
+      span: 'span-2',
+    },
+    {
+      title: 'Python Tools',
+      subtitle: 'Offensive Tooling',
+      status: 'done',
+      statusLabel: 'Done',
+      desc: 'Offensive tools: ARP Spoofer, Port Scanner, Web Scraper, Keylogger.',
+      tech: ['Python', 'Scapy', 'Requests'],
+      span: 'span-2',
+    },
+  ],
+};
 
 const Projects = () => {
-    const { t, language } = useApp();
+  const { language } = useApp();
+  const projects = projectsData[language];
 
+  return (
+    <section className="section" id="projets">
+      <div className="shell">
+        <div className="section-head">
+          <div>
+            <div className="kicker"><span className="ix">03</span> {language === 'fr' ? 'Projets' : 'Projects'}</div>
+            <h2>{language === 'fr' ? 'Projets' : 'Projects'}</h2>
+          </div>
+          <p className="desc">
+            {language === 'fr'
+              ? 'Projets personnels en securite offensive, infrastructure et developpement d\'outils.'
+              : 'Personal projects in offensive security, infrastructure and tool development.'}
+          </p>
+        </div>
 
-    const projects = projectsData[language];
+        <div className="proj-grid">
+          {projects.map((proj, i) => {
+            const card = (
+              <div className={`proj ${proj.span} ${proj.status}`}>
+                <div className="proj-head">
+                  <span className="proj-idx">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="proj-status">{proj.statusLabel}</span>
+                </div>
+                <h3 className="proj-title">{proj.title}</h3>
+                <p className="proj-desc">{proj.desc}</p>
+                <div className="proj-tech">
+                  {proj.tech.map((t, j) => (
+                    <span key={j}>{t}</span>
+                  ))}
+                </div>
+                {proj.link && (
+                  <span className="proj-link">
+                    {language === 'fr' ? 'Voir le projet' : 'View project'} ↗
+                  </span>
+                )}
+              </div>
+            );
 
-    return (
-        <section className={styles.projectsSection}>
-            <h2 className={styles.title}>{t.projects.title}</h2>
-            <div className={styles.grid}>
-                {projects.map((project, index) => {
-                    const CardContent = () => (
-                        <div className={`${styles.card} ${project.link ? styles.clickable : ''}`}>
-                            <span className={styles.status}>{project.status}</span>
-                            <h3 className={styles.cardTitle}>
-                                {project.title}
-                                {project.link && <span className={styles.linkIcon}> ↗</span>}
-                            </h3>
-                            <p className={styles.description}>{project.description}</p>
-                            <div className={styles.techStack}>
-                                {project.tech.map((t, i) => (
-                                    <span key={i} className={styles.techItem}>#{t}</span>
-                                ))}
-                            </div>
-                        </div>
-                    );
-
-                    return project.link ? (
-                        <a
-                            key={index}
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ textDecoration: 'none', color: 'inherit' }}
-                        >
-                            <CardContent />
-                        </a>
-                    ) : (
-                        <div key={index}><CardContent /></div>
-                    );
-                })}
-            </div>
-        </section>
-    );
+            return proj.link ? (
+              <a key={i} href={proj.link} target="_blank" rel="noopener noreferrer" style={{ display: 'contents' }}>
+                {card}
+              </a>
+            ) : (
+              <div key={i} style={{ display: 'contents' }}>{card}</div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Projects;
