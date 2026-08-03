@@ -5,26 +5,24 @@ import { useApp } from '@/context/AppContext';
 
 const content = {
   fr: {
-    status:    'Disponible pour alternance',
+    status:    'En alternance',
     location:  'France',
     role:      'Mastère Cybersécurité, Red Team & Sécurité Offensive',
-    lede:      "Étudiant passionné par la sécurité offensive. Je me forme aux techniques d'attaque, au Red Teaming et au développement d'outils. À la recherche d'une alternance en Pentest.",
-    cta1:      'Voir les projets',
+    lede:      "Étudiant passionné par la sécurité offensive. Je me forme aux techniques d'attaque, au Red Teaming et au développement d'outils.",
     cta2:      'Me contacter',
   },
   en: {
-    status:    'Available for apprenticeship',
+    status:    'On apprenticeship',
     location:  'France',
     role:      "Cybersecurity Master's, Red Team & Offensive Security",
-    lede:      'Student passionate about offensive security. I specialize in attack techniques, Red Teaming and tool development. Seeking a Penetration Testing apprenticeship.',
-    cta1:      'View Projects',
+    lede:      'Student passionate about offensive security. I specialize in attack techniques, Red Teaming and tool development.',
     cta2:      'Contact',
   },
 };
 
 const HeroGrid = () => {
   const canvasRef = useRef(null);
-  const state = useRef({ mx: -9999, my: -9999, offset: 0, raf: null });
+  const state = useRef({ offset: 0, raf: null });
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current;
@@ -32,7 +30,7 @@ const HeroGrid = () => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width;
     const h = canvas.height;
-    const { mx, my, offset } = state.current;
+    const { offset } = state.current;
     const CELL = 40;
 
     ctx.clearRect(0, 0, w, h);
@@ -50,32 +48,6 @@ const HeroGrid = () => {
       ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
     }
 
-    // Reveal layer near mouse
-    if (mx >= 0 && mx <= w) {
-      const RADIUS = 280;
-      ctx.save();
-      const grad = ctx.createRadialGradient(mx, my, 0, mx, my, RADIUS);
-      grad.addColorStop(0, 'rgba(184,155,122,0.5)');
-      grad.addColorStop(1, 'rgba(184,155,122,0)');
-      ctx.strokeStyle = 'rgba(184,155,122,1)';
-      ctx.lineWidth = 1;
-
-      for (let x = startX; x < w + CELL; x += CELL) {
-        const dist = Math.abs(x - mx);
-        if (dist > RADIUS) continue;
-        const alpha = Math.max(0, 1 - dist / RADIUS) * 0.5;
-        ctx.strokeStyle = `rgba(184,155,122,${alpha})`;
-        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
-      }
-      for (let y = startY; y < h + CELL; y += CELL) {
-        const dist = Math.abs(y - my);
-        if (dist > RADIUS) continue;
-        const alpha = Math.max(0, 1 - dist / RADIUS) * 0.5;
-        ctx.strokeStyle = `rgba(184,155,122,${alpha})`;
-        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
-      }
-      ctx.restore();
-    }
 
     // Vertical fade mask via globalCompositeOperation
     const fadeH = h * 0.25;
@@ -117,25 +89,11 @@ const HeroGrid = () => {
     };
   }, [draw]);
 
-  const handleMouseMove = useCallback((e) => {
-    const rect = canvasRef.current?.closest('.hero')?.getBoundingClientRect();
-    if (!rect) return;
-    state.current.mx = e.clientX - rect.left;
-    state.current.my = e.clientY - rect.top;
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    state.current.mx = -9999;
-    state.current.my = -9999;
-  }, []);
-
   return (
     <canvas
       ref={canvasRef}
       className="hero-grid-canvas"
       aria-hidden="true"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
     />
   );
 };
@@ -171,9 +129,6 @@ const Hero = () => {
             <div>
               <p className="hero-lede">{c.lede}</p>
               <div className="hero-cta">
-                <a href="#projets" className="btn primary">
-                  {c.cta1} <span className="arr">↗</span>
-                </a>
                 <a href="#contact" className="btn ghost">
                   {c.cta2}
                 </a>

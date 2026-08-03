@@ -13,6 +13,14 @@ const certs = [
     link:    'https://credentials.offsec.com/f29c084b-e5c8-4fa1-893d-f4a243a7648f#acc.F1jkArlJ',
   },
   {
+    name:    'CPTS',
+    issuer:  'HackTheBox',
+    status:  'done',
+    label:   { fr: 'Obtenu - 2026', en: 'Achieved - 2026' },
+    image:   '/assets/certifications/CPTS_LOGO.webp',
+    link:    'https://profile.hackthebox.com/certificate/HTBCERT-56C2725F80',
+  },
+  {
     name:    'CRTO',
     issuer:  'Zero-Point Security',
     status:  'done',

@@ -20,14 +20,8 @@ const Contact = () => {
           <div>
             <h5>{isFr ? 'Contact' : 'Contact'}</h5>
             <div className="social-row">
-              <a href="https://github.com/Goultarde" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <img src="/assets/Github.svg" alt="GitHub" width="18" height="18" />
-              </a>
               <a href="https://linkedin.com/in/harouna-m-coulibaly-229a2722a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <img src="/assets/linkedin.svg" alt="LinkedIn" width="18" height="18" className="icon-color" />
-              </a>
-              <a href="https://portal.offsec.com/public-profile/1b006de3-2f37-11f0-9794-0ad45fbd5c7b" target="_blank" rel="noopener noreferrer" aria-label="OffSec">
-                <img src="/assets/Offsec_logo.svg" alt="OffSec" width="18" height="18" className="icon-color" />
               </a>
             </div>
           </div>

@@ -366,7 +366,6 @@ img, svg { display: block; max-width: 100%; }
   gap: clamp(24px, 6vw, 96px);
   align-items: start;
   padding-top: 36px;
-  border-top: 1px solid var(--fg-rule);
 }
 @media (max-width: 880px) { .hero-meta { grid-template-columns: 1fr; } }
 .hero-role {
@@ -740,7 +739,8 @@ img, svg { display: block; max-width: 100%; }
   align-items: center;
   text-align: center;
   padding: 32px 20px 28px;
-  border: 1px solid var(--fg-rule);
+  background: color-mix(in oklab, var(--ink-3) 85%, var(--fg-dim));
+  border: 1px solid color-mix(in oklab, var(--fg-rule) 50%, var(--fg-dim));
   position: relative;
   transition: border-color var(--t-base), transform var(--t-base);
   overflow: visible;
@@ -1083,7 +1083,7 @@ img, svg { display: block; max-width: 100%; }
 [data-theme="paper"] .section.paper .writing .w-tag { color: #7A8693; }
 [data-theme="paper"] .section.paper .writing .w-arr { color: #7A8693; }
 /* certs in light theme */
-[data-theme="paper"] .section.paper .cert { border-color: #232B36; }
+[data-theme="paper"] .section.paper .cert { background: #1E2735; }
 [data-theme="paper"] .section.paper .cert h4 { color: #E8E4DA; }
 [data-theme="paper"] .section.paper .cert .meta { color: #7A8693; }
 [data-theme="paper"] .section.paper .cert.done .meta { color: #B89B7A; }
